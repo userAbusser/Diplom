@@ -12,7 +12,7 @@ app.use(express.json());//
 app.use(cors());//конектіт апку через 4000 порт
 
 //З'єднання з бд MongoDB
-mongoose.connect("mongodb+srv://pankovama:9sZoF9HCYU00uVjq@cluster0.qdh5t5b.mongodb.net/PhoneStore")
+mongoose.connect("mongodb+srv://pankovama:9sZoF9HCYU00uVjq@cluster0.qdh5t5b.mongodb.net/PhoneStore").then(() => console.log("DB ok"))
 
 //API creation
 app.get("/", (req, res) => {
